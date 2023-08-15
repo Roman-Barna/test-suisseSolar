@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.wrapper .main .main-block .container .content .content-btn, .wrapper .main .main-block .container .main-block-form .form-btn {
+  display: flex;
+  padding: 10px 8px 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #fefeff;
+  border: none;
+  border-radius: 20px;
+  color: #1d2433;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  box-shadow: 0px 8px 20px 0px rgba(145, 157, 181, 0.15);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.wrapper .main .main-block .container .content .content-btn:hover, .wrapper .main .main-block .container .main-block-form .form-btn:hover {
+  background: #f8f9fc;
+  box-shadow: none;
+}
+.wrapper .main .main-block .container .content .content-btn:active, .wrapper .main .main-block .container .main-block-form .form-btn:active {
+  background: #6c707a;
+  box-shadow: none;
+}
+.wrapper .main .main-block .container .content .content-btn:disabled, .wrapper .main .main-block .container .main-block-form .form-btn:disabled {
+  background: #fefeff;
+  box-shadow: none;
+  cursor: auto;
+}
+
+.wrapper .main .main-block .container .main-block-form .form-row-check .form-check-box input, .wrapper .main .main-block .container .main-block-form .form-row-check .form-check-box img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.wrapper .main-title, .wrapper .main .main-block .container .content .content-title, .wrapper .main .main-block .container .content .content-description, .wrapper .main .main-block .container .main-block-form .form-title, .wrapper .main .main-block .container .main-block-form .form-row label, .wrapper .main .main-block .container .main-block-form .form-row input,
+.wrapper .main .main-block .container .main-block-form .form-row textarea, .wrapper .main .main-block .container .main-block-form .form-row-check label {
+  font-family: Poppins;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.success, .errors {
+  display: none;
+  margin-top: 8px;
+  position: relative;
+}
+.success img, .errors img {
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+  left: 0;
+}
+
+.wrapper {
+  background-image: url("../images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .main-title {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+.wrapper .main .main-block {
+  border-radius: 20px;
+  background: linear-gradient(136deg, rgba(225, 230, 239, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+  /* Effect for button */
+  box-shadow: 0px 8px 20px 0px rgba(145, 157, 181, 0.15);
+  padding: 80px 0;
+}
+.wrapper .main .main-block .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .main .main-block .container .content {
+  flex-basis: 50%;
+  align-self: flex-start;
+}
+.wrapper .main .main-block .container .content .content-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.wrapper .main .main-block .container .content .content-description {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 40px;
+  color: #6c707a;
+}
+.wrapper .main .main-block .container .content .width-50 {
+  width: 255px;
+}
+.wrapper .main .main-block .container .main-block-form {
+  flex-basis: 50%;
+}
+.wrapper .main .main-block .container .main-block-form .form-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.wrapper .main .main-block .container .main-block-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.wrapper .main .main-block .container .main-block-form .form-row label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  color: #fefeff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input,
+.wrapper .main .main-block .container .main-block-form .form-row textarea {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid #fefeff;
+  background: #fefeff;
+  color: #4a505c;
+  resize: none;
+  min-height: 30px;
+  transition: all 0.5s ease;
+  outline: none;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input:hover,
+.wrapper .main .main-block .container .main-block-form .form-row textarea:hover {
+  color: #9d9ea1;
+  border: 1px solid #1d5bd6;
+  background: #fff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input:focus,
+.wrapper .main .main-block .container .main-block-form .form-row textarea:focus {
+  border: 1px solid #1d5bd6 !important;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.25);
+}
+.wrapper .main .main-block .container .main-block-form .form-row input:disabled,
+.wrapper .main .main-block .container .main-block-form .form-row textarea:disabled {
+  color: #9d9ea1;
+  border: #c2c9d1;
+  background: var(--gray-lighter, linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%), #c2c9d1);
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.error, .wrapper .main .main-block .container .main-block-form .form-row textarea.error {
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #f8727d;
+  background: #fff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.error:hover, .wrapper .main .main-block .container .main-block-form .form-row textarea.error:hover {
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #BA2532 !important;
+  background: #fff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.error:focus, .wrapper .main .main-block .container .main-block-form .form-row textarea.error:focus {
+  color: rgba(0, 0, 0, 0.25);
+  border: 1px solid #BA2532 !important;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.filled, .wrapper .main .main-block .container .main-block-form .form-row textarea.filled {
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #0EA472;
+  background: #fff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.filled:hover, .wrapper .main .main-block .container .main-block-form .form-row textarea.filled:hover {
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #04724D !important;
+  background: #fff;
+}
+.wrapper .main .main-block .container .main-block-form .form-row input.filled:focus, .wrapper .main .main-block .container .main-block-form .form-row textarea.filled:focus {
+  color: rgba(0, 0, 0, 0.25);
+  border: 1px solid #04724D !important;
+}
+.wrapper .main .main-block .container .main-block-form .form-row textarea {
+  min-height: 60px;
+}
+.wrapper .main .main-block .container .main-block-form .form-row-check {
+  margin-bottom: 10px;
+  display: flex;
+}
+.wrapper .main .main-block .container .main-block-form .form-row-check label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  color: #6c707a;
+}
+.wrapper .main .main-block .container .main-block-form .form-row-check .form-check-box {
+  position: relative;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.wrapper .main .main-block .container .main-block-form .form-row-check .form-check-box input {
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+}
+.wrapper .main .main-block .container .main-block-form .form-row-check .form-check-box img {
+  position: absolute;
+  z-index: 0;
+}
+.wrapper .main .main-block .container .main-block-form .form-btn {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

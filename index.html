@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="main">
+        <div class="container">
+          <h1 class="main-title">Oh, Hallo</h1>
+        </div>
+
+        <div class="main-block">
+          <div class="container">
+            <div class="content">
+              <h4 class="content-title width-50">
+                Ihr Projekt kann unser Stolz werden
+              </h4>
+              <p class="content-description width-50">
+                Hinterlassen Sie Ihre Kontaktdaten und unsere Spezialisten
+                werden Sie in Kürze kontaktieren. Oder senden Sie eine E-Mail an
+              </p>
+              <button class="content-btn">
+                E-Mail senden <img src="./images/Right3.png" alt="right" />
+              </button>
+            </div>
+            <form class="main-block-form">
+              <h2 class="form-title">Schreiben Sie uns einen Brief</h2>
+              <div class="form-row">
+                <label for="form-name">Dein Name*</label>
+                <input type="text" id="form-name" placeholder="Dein Name" />
+                <div class="errors">
+                  <img src="./images/Warning.svg" />Error message
+                </div>
+                <div class="success">
+                  <img src="./images/Circle.svg" />Success message
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="form-phone">Telefon*</label>
+                <input type="text" id="form-phone" placeholder="Telefon*" />
+                <div class="errors">
+                  <img src="./images/Warning.svg" />Error message
+                </div>
+                <div class="success">
+                  <img src="./images/Circle.svg" />Success message
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="form-desc">Nachricht *</label>
+                <textarea
+                  type="text"
+                  id="form-desc"
+                  placeholder="Nachricht"
+                ></textarea>
+                <div class="errors">
+                  <img src="./images/Warning.svg" />Error message
+                </div>
+                <div class="success">
+                  <img src="./images/Circle.svg" />Success message
+                </div>
+              </div>
+              <div class="form-row-check">
+                <div class="form-check-box">
+                  <input type="checkbox" id="form-check" />
+                  <img
+                    id="check-img"
+                    src="./images/Checked=False, Disabled=True.svg"
+                    alt=""
+                  />
+                </div>
+                <label for="form-check"
+                  >Ich erkläre mich mit der Verarbeitung der eingegebenen Daten
+                  sowie der Datenschutzerklärung einverstanden. *</label
+                >
+              </div>
+              <button class="form-btn" id="form-btn-submit">
+                Senden <img src="./images/Right3.png" alt="right" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- jQuery -->
+    <script src="./lib/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

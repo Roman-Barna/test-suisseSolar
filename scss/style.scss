@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./backgrounds";
+@import "./mixins";
+@import "./globalStyle";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.success, .errors {
+    display: none;
+    margin-top: 8px;
+    position: relative;
+
+    img {
+        margin-right: 8px;
+        position: relative;
+        top: 3px;
+        left: 0;
+    }
+}
+
+.wrapper {
+  background-image: url("../images/main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main {
+    &-title {
+      @extend %fontPoppins;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 80px;
+      margin-bottom: 50px;
+    }
+
+    .main-block {
+      border-radius: 20px;
+      background: linear-gradient(
+        136deg,
+        rgba(225, 230, 239, 0.4) 0%,
+        rgba(255, 255, 255, 0.4) 100%
+      );
+      /* Effect for button */
+      box-shadow: 0px 8px 20px 0px rgba(145, 157, 181, 0.15);
+      padding: 80px 0;
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+          flex-basis: 50%;
+          align-self: flex-start;
+
+          .content-title {
+            @extend %fontPoppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            margin-bottom: 20px;
+          }
+
+          .content-description {
+            @extend %fontPoppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 40px;
+            color: $disabled-text-white-background;
+          }
+
+          .content-btn {
+            @extend %button;
+          }
+
+          .width-50 {
+            width: 255px;
+          }
+        }
+        .main-block-form {
+          flex-basis: 50%;
+
+          .form-title {
+            @extend %fontPoppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 20px;
+          }
+
+          .form-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            label {
+              @extend %fontPoppins;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 25px;
+              color: $primary-text-black-background;
+            }
+
+            input,
+            textarea {
+              @extend %fontPoppins;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+              padding: 10px 8px;
+              border-radius: 8px;
+              border: 1px solid $primary-text-black-background;
+              background: $primary-text-black-background;
+              color: $secondary-text-white-background;
+              resize: none;
+              min-height: 30px;
+              transition: all 0.5s ease;
+              outline: none;
+
+              &:hover {
+                color: $disabled-text-black-background;
+                border: 1px solid $c800-accent-text;
+                background: $white-default;
+              }
+              
+              &:focus {
+                border: 1px solid $c800-accent-text!important;
+                background: $white-default;
+                color: $black-lighter;
+              }
+
+              &:disabled {
+                color: $disabled-text-black-background;
+                border: $gray-light;
+                background: var(
+                  --gray-lighter,
+                  linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.75) 0%,
+                    rgba(255, 255, 255, 0.75) 100%
+                  ),
+                  $gray-light
+                );
+              }
+
+            }
+
+            input.error, textarea.error {
+                color: $black-light;
+                border: 1px solid $danger-d-500;
+                background: $white-default;
+                
+                &:hover {
+                    color: $black-light;
+                    border: 1px solid $danger-d-danger-h-800!important;
+                    background: $white-default;
+                  }
+                  &:focus {
+                    color: $black-lighter;
+                    border: 1px solid $danger-d-danger-h-800!important;
+                  }
+    
+            }
+            input.filled, textarea.filled{
+                color: $black-light;
+                border: 1px solid $success-d-600;
+                background: $white-default;
+                
+                &:hover {
+                    color: $black-light;
+                    border: 1px solid $success-d-success-h-800!important;
+                    background: $white-default;
+                  }
+                  &:focus {
+                    color: $black-lighter;
+                    border: 1px solid $success-d-success-h-800!important;
+                  }
+
+            }
+
+            textarea {
+              min-height: 60px;
+            }
+          }
+
+          .form-row-check {
+            margin-bottom: 10px;
+            display: flex;
+
+            label {
+              @extend %fontPoppins;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 25px;
+              color: $disabled-text-white-background;
+            }
+
+            .form-check-box {
+                position: relative;
+                margin-top: 5px;
+                margin-right: 10px;
+                
+                input {
+                    position: relative;
+                    opacity: 0;
+                    z-index: 1;
+                    @extend %positionMax;
+                }
+                 img {
+                    position: absolute;
+                    @extend %positionMax;
+                    z-index: 0;
+                }
+            }
+            
+          }
+
+          .form-btn {
+            margin-top: 20px;
+            @extend %button;
+          }
+        }
+      }
+    }
+  }
+}
